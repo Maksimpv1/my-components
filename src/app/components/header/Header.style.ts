@@ -4,8 +4,11 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
   padding: 15px 30px;
+`;
+
+export const Wrapper = styled.div`
+  width:300px;
 `;
 
 export const ImgContainer = styled.div`
@@ -25,4 +28,7 @@ export const AvatarImg = styled.img`
 export const MainTitle = styled.h2`
   font-size: 26px;
   color: black;
+  font-style: italic;
+  text-align: center;
+  font-weight: 400;
 `;

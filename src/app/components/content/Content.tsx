@@ -1,3 +1,9 @@
+import { MainTitle } from "./_components/mainTitle/MainTitle";
+
 export const Content = () => {
-  return <div></div>;
+  return (
+    <div>
+      <MainTitle/>
+    </div>
+  )
 };
