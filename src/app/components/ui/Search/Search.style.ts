@@ -8,7 +8,7 @@ export const SearchContainer = styled.div`
   height: 35px;
   border-radius: 15px;
   padding: 5px;
-  background-color: #f4f5fb;
+  background-color: #ffffff;
 `;
 
 export const SearchIpt = styled.input`
