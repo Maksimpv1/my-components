@@ -1,4 +1,5 @@
 import { MainMenu } from "./_components/mainMenu/MainMenu";
+import { MainSlider } from "./_components/mainSlider/MainSlider";
 import { MainTitle } from "./_components/mainTitle/MainTitle";
 
 export const Content = () => {
@@ -6,6 +7,7 @@ export const Content = () => {
     <div>
       <MainTitle/>
       <MainMenu/>
+      <MainSlider/>
     </div>
   )
 };
