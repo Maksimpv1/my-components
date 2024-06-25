@@ -1,18 +1,10 @@
+import path from "path";
+
 module.exports = {
-    webpack: {
-      configure: {
-        module: {
-          rules: [
-            {
-              test: /\.(png|jpe?g|gif)$/i,
-              use: [
-                {
-                  loader: 'file-loader',
-                },
-              ],
-            },
-          ],
-        },
-      },
+  webpack: {
+    alias: {
+      app: path.resolve(__dirname, "src/app"),
+      img: path.resolve(__dirname, "src/assets/img"),
     },
-  };
+  },
+};

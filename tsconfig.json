@@ -2,10 +2,6 @@
   "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "baseUrl": ".",
-    "paths": {
-      "public/*": ["public/*"]
-    },
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -19,6 +15,11 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx"
+  },
+  "baseUrl": "src",
+  "paths": {
+    "@/*": ["./src/*"],
+    "@/assets/*": ["./src/assets/*"]
   },
   "include": ["src"]
 }
