@@ -1,4 +1,13 @@
-import { styled } from "styled-components";
+import { keyframes, styled } from "styled-components";
+
+const infinityScroll = keyframes`
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(calc(-100% - 200px));
+    }
+`;
 
 export const Container = styled.div<{ img?: string } >`
     display: flex;
@@ -11,6 +20,8 @@ export const Container = styled.div<{ img?: string } >`
     background-size: cover;
     background-color: #ACACAC;
     border-radius: 12px;
+    margin: 0 20px;
+    animation: ${infinityScroll} 10s linear infinite;
 `;
 export const Content = styled.div`
     border-bottom-left-radius: 12px;
