@@ -1,22 +1,25 @@
 import { Slide } from "./Slide/Slide"
-import rabbit from 'img/rabbit.jpg'
 import * as SC from "./MainSlider.styled"
 
 const slides = [
-    { key: 1, content: rabbit},
-    { key: 2, content: rabbit},
-    { key: 3, content: rabbit},
-    { key: 4, content: rabbit},
-    { key: 5, content: rabbit},
-    { key: 6 , content: rabbit}
+    { key: 1, content: '/img/html.png'},
+    { key: 2, content: '/img/css.png'},
+    { key: 3, content: '/img/JavaScript.png'},
+    { key: 4, content: '/img/NextJS.jpg'},
+    { key: 5, content: '/img/React.png'},
+    { key: 6 , content: '/img/Git.png'},
+    { key: 7 , content: '/img/FireBase.png'}
 ]
 
 export const MainSlider = () => {
+    const duplicatedSlides = [...slides, ...slides];
     return(
         <SC.Container>
-            {slides.map((item)=>(
+            <SC.SlidesWrapper>
+            {duplicatedSlides.map((item)=>(
                 <Slide key={item.key} content={item.content}/>
             ))}
+            </SC.SlidesWrapper>
         </SC.Container>
     )
 }
