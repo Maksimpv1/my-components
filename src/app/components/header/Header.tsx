@@ -1,12 +1,10 @@
 import * as SC from "./Header.style";
 
 const options = [
-   {value: <SC.ImgContainer>
-             <SC.AvatarImg src={"/img/avatar.jpg"} />
-           </SC.ImgContainer>,
+   {value: '',
    key:  1
    },
-  {value: <SC.MainTitle>Popov Maksim</SC.MainTitle>,
+  {value: '',
   key:  2
   }
 ]
@@ -14,11 +12,14 @@ const options = [
 export const Header = () => {
   return (
     <SC.Container>
-      {options.map((item)=>(        
-        <SC.Wrapper key={item.key}>
-          {item.value}
-        </SC.Wrapper>
-      ))}
+      <a>email</a>
+      <div>
+        {options.map((item)=>(        
+          <SC.Wrapper key={item.key}>
+            {item.value}
+          </SC.Wrapper>
+        ))}
+      </div>
     </SC.Container>
   );
 };

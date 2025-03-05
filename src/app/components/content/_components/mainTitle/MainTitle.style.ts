@@ -22,3 +22,24 @@ export const TextDiscriptiom = styled.p`
     text-align: center;
     max-width: 800px;
 `;
+export const ImgContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  overflow: hidden;
+`;
+export const AvatarImg = styled.img`
+  width: 100%;
+  height: 100%;
+`;
+
+export const MainName = styled.h2`
+  font-size: 26px;
+  color: black;
+  font-style: italic;
+  text-align: center;
+  font-weight: 400;
+`;

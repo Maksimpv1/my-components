@@ -3,6 +3,10 @@ import * as SC from "./MainTitle.style"
 export const MainTitle = () => {
     return(
         <SC.Container>
+            <SC.ImgContainer>
+             <SC.AvatarImg src={"/img/avatar.jpg"} />
+           </SC.ImgContainer>
+           <SC.MainName>Popov Maksim</SC.MainName>
             <SC.MainTitle>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, sequi!
             </SC.MainTitle>

@@ -19,5 +19,7 @@ export const Container = styled.div`
 export const SlidesWrapper = styled.div`
 display: flex;
 animation: ${scroll} 35s linear infinite ; 
-
+&:hover{
+  animation-play-state: paused;
+}
 `;

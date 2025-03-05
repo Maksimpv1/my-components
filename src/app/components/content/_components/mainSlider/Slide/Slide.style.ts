@@ -14,8 +14,17 @@ export const Container = styled.div<{ img?: string }>`
     background-repeat: no-repeat; 
     background-color: #FFFFFF;
     border-radius: 12px;
-    margin: 0 20px;
+    margin: 20px;
+    transition: 0.2s ease-in-out;    
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.1);
+        transition: 0.2s ease-in-out;
+        box-shadow: 0 0 5px 2px #4B4636;
+    }
 `;
+
+
 export const Content = styled.div`
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
