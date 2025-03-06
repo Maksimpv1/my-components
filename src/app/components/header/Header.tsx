@@ -1,25 +1,31 @@
 import * as SC from "./Header.style";
 
 const options = [
-   {value: '',
-   key:  1
+   {value: 'Linkedin',
+   key:  1,
+   link: 'https://www.linkedin.com/in/1-maxim-popov'
    },
-  {value: '',
-  key:  2
+  {value: 'Github',
+  key:  2,
+   link: 'https://github.com/Maksimpv1'
+  },
+  {value: 'Telegram',
+    key:  2,
+   link: 'https://t.me/Popov_Max'
   }
 ]
 
 export const Header = () => {
   return (
     <SC.Container>
-      <a>email</a>
-      <div>
+      <SC.Link href="mailto:maksimpv1@gmial.com">maksimpv1@gmail.com</SC.Link>
+      <SC.Wrapper>
         {options.map((item)=>(        
-          <SC.Wrapper key={item.key}>
+          <SC.Link href={item.link} key={item.key}>
             {item.value}
-          </SC.Wrapper>
+          </SC.Link>
         ))}
-      </div>
+      </SC.Wrapper>
     </SC.Container>
   );
 };
