@@ -1,9 +1,10 @@
+import { BtnNextPage } from '../../../ui/BtnNextPage/BtnNextPage'
 import * as SC from './MainMenu.style'
 
 const options = [
     {key: 1, value: 'SKILLS', id: "skills"},
-    {key: 2, value: 'EXPERIENCE', id: "skills"},
-    {key: 4, value: 'PROJECTS', id: "skills"},
+    {key: 2, value: 'EXPERIENCE', id: "experience"},
+    {key: 4, value: 'PROJECTS', id: "projects"},
     {key: 3, value: 'ABOUT ME', id: "skills"},
     {key: 5, value: 'CONTACTS', id: "skills"}
 ]
@@ -24,7 +25,7 @@ export const MainMenu = () => {
                     </SC.StyledBtn>
                 ))}
             </SC.BtnContainer>            
-            <SC.BtnGo func={() => scrollToblock('skills')}>Let's go <SC.Gif src='/gif/downArrow-unscreen.gif' alt="loading"/></SC.BtnGo>
+            <BtnNextPage id='skills'>Let's go <SC.Gif src='/gif/downArrow-unscreen.gif' alt="loading"/></BtnNextPage>
         </SC.Container>
         
     )

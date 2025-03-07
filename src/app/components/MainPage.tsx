@@ -1,5 +1,6 @@
 import { Content } from "./content/Content"
 import { Experience } from "./experience/Experience"
+import { Projects } from "./projects/Projects"
 import { Skills } from "./skills/Skills"
 
 export const MainPage = () => {
@@ -8,8 +9,13 @@ export const MainPage = () => {
             <Content />
             <section id="skills">                
                 <Skills />
-                <Experience />  
-            </section>          
+            </section>  
+            <section id="experience">                
+                <Experience />
+            </section> 
+            <section id="projects">                
+                <Projects />
+            </section>    
         </div>
     )
 }
