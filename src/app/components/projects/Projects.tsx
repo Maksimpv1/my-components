@@ -6,12 +6,12 @@ const projectsData = [
     {
         title:"Creative hub",
         text:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis voluptate molestiae consequatur voluptates adipisci enim!",
-        img:"/img/Notion.jpg",
+        img:"/img/creative.jpg",
     },
     {
         title:"Student",
         text:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis voluptate molestiae consequatur voluptates adipisci enim!",
-        img:"/img/Notion.jpg",
+        img:"/img/student.jpg",
     },
     {
         title:"Notion clone",

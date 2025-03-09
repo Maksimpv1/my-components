@@ -20,6 +20,7 @@ export const Container = styled.div`
     }
 `;
 export const ImgBox = styled.div`
+    width: 350px;
     padding: 10px;
 `;
 
@@ -35,10 +36,12 @@ export const Title = styled.h2`
 
 `;
 export const Text = styled.p`
+margin: 0;
+padding: 0;
 
 `;
 export const Img = styled.img`
-    width: 350px;
+    width: 100%;
     border-radius: 15px;
 `;
 
@@ -49,4 +52,46 @@ export const Button = styled(CustomButton)`
     background-color: #F9F9F9;
     box-shadow: 0 0 10px 0 #ACACAC;
     border-radius: 15px;
+    margin-top: 20px;
+`;
+
+
+export const ModalBox = styled.div`
+    background: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin:0px;
+    *{        
+        background: none;
+    }
+`;
+
+export const ModalImg = styled.div`
+    display: flex;
+    width: 550px;
+    margin: 0 auto;
+`;
+
+export const ModalTitle = styled.div`
+    display: flex;
+    margin-left: 30px;
+    margin: 10px auto;
+`;
+
+export const ModalInfo = styled.div`
+    display: flex;
+    margin-left: 30px;
+    margin: 10px;
+    gap: 10px;
+    margin-top: 20px;
+`;
+export const ModalStack = styled.div`
+    display: flex;
+    width: 250px;
+    height: 200px;
+    box-shadow: 0 0 5px 1px grey;
+    border-radius: 15px;
+    padding: 5px;
 `;
