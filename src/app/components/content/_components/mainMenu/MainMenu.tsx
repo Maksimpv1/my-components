@@ -5,7 +5,7 @@ const options = [
     {key: 1, value: 'SKILLS', id: "skills"},
     {key: 2, value: 'EXPERIENCE', id: "experience"},
     {key: 4, value: 'PROJECTS', id: "projects"},
-    {key: 3, value: 'ABOUT ME', id: "skills"},
+    {key: 3, value: 'ABOUT ME', id: "about"},
     {key: 5, value: 'CONTACTS', id: "skills"}
 ]
 

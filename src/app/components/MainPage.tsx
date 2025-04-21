@@ -1,3 +1,4 @@
+import { About } from "./about/About"
 import { Content } from "./content/Content"
 import { Experience } from "./experience/Experience"
 import { Projects } from "./projects/Projects"
@@ -6,7 +7,9 @@ import { Skills } from "./skills/Skills"
 export const MainPage = () => {
     return(
         <div>
-            <Content />
+            <section id="content">
+                <Content />
+            </section>
             <section id="skills">                
                 <Skills />
             </section>  
@@ -15,7 +18,10 @@ export const MainPage = () => {
             </section> 
             <section id="projects">                
                 <Projects />
-            </section>    
+            </section> 
+            <section id="about">                
+                <About />
+            </section>     
         </div>
     )
 }

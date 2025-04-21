@@ -5,7 +5,7 @@ export const Container = styled.div`
     display: flex;
     width: 100%;
     background-color: #F0F0F0;
-    padding: 20px;
+    padding: 10px;
     border-radius: 15px;
     box-shadow: 0 0 5px 0 #CACACA;
     transition: 0.3s ease-in-out;
@@ -33,6 +33,8 @@ export const InfoBox = styled.div`
 `;
 
 export const Title = styled.h2`
+margin: 0;
+padding: 0;
 
 `;
 export const Text = styled.p`

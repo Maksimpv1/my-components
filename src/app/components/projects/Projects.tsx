@@ -30,8 +30,8 @@ export const Projects = () => {
                 {projectsData.map((item,index)=>(                    
                 <Cards key={index} title={item.title} text={item.text} img={item.img}/>
                 ))}
-                <div style={{margin:"20px 0 0 0"}}>
-                    <BtnNextPage>More About ME</BtnNextPage>     
+                <div style={{padding:"20px 0 0 0"}}>
+                    <BtnNextPage id='about'>More About ME</BtnNextPage>     
                 </div>           
             </SC.Wrapper>
         </SC.Contanier>
