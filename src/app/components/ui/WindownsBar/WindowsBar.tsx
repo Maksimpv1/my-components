@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import * as SC from "./WindownsBar"
-import { removeListener } from "process"
 
 export const WindownsBar = () => {
     const [height, getHeight] = useState<number>(0)
@@ -14,15 +13,12 @@ export const WindownsBar = () => {
         if(fullScreen > height){
             getPerBar(Math.round(height/fullScreen * 100))
         }
-        console.log(`fullScreen: ${fullScreen} + height:${height}`)
-        console.log(perBar)
         return () => {            
             window.removeEventListener("scroll",()=>{})        
         }
-    },[height])
+    },[height,perBar])
     return(
         <SC.Container percent={perBar + ''}>
-            
         </SC.Container>
     )
 }

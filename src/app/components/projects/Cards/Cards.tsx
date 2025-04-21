@@ -1,5 +1,4 @@
 import { FC, useState } from "react"
-import { CustomButton } from "../../ui/CustomButton/CustomButton"
 import * as SC from "./Cards.module"
 import { ModalWindow } from "../../ui/ModalWin/ModalWindow"
 
