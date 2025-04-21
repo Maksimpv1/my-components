@@ -1,12 +1,19 @@
 import { keyframes, styled } from "styled-components";
 import { CustomButton } from "../../../ui/CustomButton/CustomButton";
 
-export const Container = styled.div`
+export const Container = styled.div`    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+export const BtnContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     padding-top: 50px;
+    margin-bottom: 200px;
 `;
 
 const colorChange = keyframes`
@@ -36,9 +43,32 @@ export const StyledBtn = styled(CustomButton)`
     border: 1px solid transparent;
 
     &:hover {
-        font-size: 18px;
+        font-size: 19px;
         transition: 0.2s ease-in-out;
         animation-play-state: paused;
-        border:1px solid black;
     }
+`;
+
+export const BtnGo = styled(CustomButton)`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 130px;
+    font-size: 16px;
+    padding: 10px 5px 10px 20px;
+    font-weight: 500;
+    background-color: #FCE8B7;
+    border: none;
+    box-shadow: 0 0 5px 0 #927A3F;
+    &:hover{
+        scale: 1.1;
+        background-color:#FCF7EA;
+        color: #FCC949;
+    }
+`;
+
+export const Gif= styled.img`
+    right: 0;
+    background:none;
+    background-color: none;
 `;

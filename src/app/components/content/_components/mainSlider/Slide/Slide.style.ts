@@ -1,28 +1,30 @@
-import { keyframes, styled } from "styled-components";
+import { styled } from "styled-components";
 
-const infinityScroll = keyframes`
-    0%{
-        transform: translateX(0%);
-    }
-    100%{
-        transform: translateX(calc(-100% - 200px));
-    }
-`;
 
-export const Container = styled.div<{ img?: string } >`
+export const Container = styled.div<{ img?: string }>`
     display: flex;
     flex-direction: column;
     justify-content: end;
     align-items: start;
     width: 200px;
     height: 300px;
-    background-image: url(${({img})=> img});
-    background-size: cover;
-    background-color: #ACACAC;
+    background-image: url(${({ img }) => img});
+    background-size: 180px auto; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-color: #FFFFFF;
     border-radius: 12px;
-    margin: 0 20px;
-    animation: ${infinityScroll} 10s linear infinite;
+    margin: 20px;
+    transition: 0.2s ease-in-out;    
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.1);
+        transition: 0.2s ease-in-out;
+        box-shadow: 0 0 5px 2px #4B4636;
+    }
 `;
+
+
 export const Content = styled.div`
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;

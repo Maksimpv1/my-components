@@ -1,34 +1,43 @@
 import { styled } from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.div`  
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
+  *{
+    color: #4B4636;
+  }
 `;
 
 export const Wrapper = styled.div`
-  width:300px;
-`;
-
-export const ImgContainer = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 70px;
-  height: 70px;
-  border-radius: 100%;
-  overflow: hidden;
-`;
-export const AvatarImg = styled.img`
-  width: 100%;
-  height: 100%;
+  gap: 30px;
+
 `;
 
-export const MainTitle = styled.h2`
-  font-size: 26px;
-  color: black;
-  font-style: italic;
-  text-align: center;
-  font-weight: 400;
+export const Link = styled.a`
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s ease-in-out;  
+  &:hover{
+    color: #FCC949;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; 
+    width: 0; 
+    height: 1px; 
+    background-color: #FCC949; 
+    transition: width 0.3s ease-in-out; 
+  }
+
+  &:hover::after {
+    width: 100%; 
+  }
+  
 `;
+

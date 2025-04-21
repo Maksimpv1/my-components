@@ -1,29 +1,31 @@
-import { Search } from "../ui/Search/Search";
 import * as SC from "./Header.style";
-import Avatar from "img/avatar.jpg";
 
 const options = [
-  {value: <SC.ImgContainer>
-            <SC.AvatarImg src={Avatar} />
-          </SC.ImgContainer>,
-  key:  1
+   {value: 'Linkedin',
+   key:  1,
+   link: 'https://www.linkedin.com/in/1-maxim-popov'
+   },
+  {value: 'Github',
+  key:  2,
+   link: 'https://github.com/Maksimpv1'
   },
-  {value: <SC.MainTitle>Popov Maksim</SC.MainTitle>,
-  key:  2
-  },
-  {value: <Search />,
-  key:  3
+  {value: 'Telegram',
+    key:  2,
+   link: 'https://t.me/Popov_Max'
   }
 ]
 
 export const Header = () => {
   return (
     <SC.Container>
-      {options.map((item)=>(        
-        <SC.Wrapper key={item.key}>
-          {item.value}
-        </SC.Wrapper>
-      ))}
+      <SC.Link href="mailto:maksimpv1@gmial.com">maksimpv1@gmail.com</SC.Link>
+      <SC.Wrapper>
+        {options.map((item)=>(        
+          <SC.Link href={item.link} key={item.key}>
+            {item.value}
+          </SC.Link>
+        ))}
+      </SC.Wrapper>
     </SC.Container>
   );
 };
