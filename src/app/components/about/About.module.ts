@@ -1,9 +1,5 @@
 import { styled } from "styled-components";
 
-interface Itype {
-    type: 'name' | 'tech' | 'years';
-}
-
 export const Container = styled.div`
     height: 100vh;
 `;
@@ -32,8 +28,11 @@ export const Card = styled.div`
     width: 100%;
     gap: 15px; 
 `;
-export const Text:Itype = styled.p`
+export const Text = styled.p`
+    white-space: break-spaces;
+`;
+export const StyledText = styled.span<{color?:string}>`
     font-size: 16px;
-    font-weight: ;
-    color: ;
+    font-weight: 500;
+    color: ${({color})=> color};
 `;

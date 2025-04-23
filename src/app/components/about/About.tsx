@@ -1,30 +1,36 @@
 import { BtnNextPage } from "../ui/BtnNextPage/BtnNextPage"
 import * as SC from "./About.module"
+interface Itype {
+    type: 'name' | 'tech' | 'years';
+}
 
 export const About = () => {
+    const colors = {
+        red:"#FF6B6B",
+    }
     return(
         <SC.Container>
             <SC.Wrapper>      
                 <SC.Cards>
                     <SC.Card>
                         <h2>Образование</h2>
-                        <p>БГУИР 
+                        <SC.Text><SC.StyledText color={colors.red}>БГУИР</SC.StyledText> 
                         Инженер по информационным технологиям и управлению в технических системах
-                        2017 - 2021</p>
-                        <p>TeachMeSkills
+                        2017 - 2021</SC.Text>
+                        <SC.Text>TeachMeSkills
                         Frontend Developer
-                        2022 - 2023 </p>                        
+                        2022 - 2023 </SC.Text>                        
                     </SC.Card>
                     <SC.Card>
                     <h2>Обо мне</h2>
-                    <p>
+                    <SC.Text>
                     С детства меня привлекало в IT-сфере большие возможности
                     для творчества и развитие технологий, которые оказывают влияние на жизнь людей.
                     - Почему я выбрал направление Frontend?
                     Познакомился с Frontend на последнем курсе университета, и в начале 2023 года принял решение что хочу развиваться в этом направлении и стать лучшим ! 
                     - Я самостоятельный, дисциплинированный. Уважаю чужое мнение и конструктивную критику, иду на 
                     компромиссы, и могу отстаивать свою точку мнения. Постоянно работаю над собой. Имел опыт организационно-управленческой деятельности.
-                    </p>
+                    </SC.Text>
                     </SC.Card>
                 </SC.Cards> 
                 <BtnNextPage id='about'>Contact</BtnNextPage>   
