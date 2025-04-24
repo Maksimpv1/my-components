@@ -1,5 +1,10 @@
-import { styled } from "styled-components";
+import { keyframes, styled } from "styled-components";
 
+const blinker = keyframes`
+  0% { color: #FCC949; }
+  50% { color: transparent; }
+  100% { color: #FCC949; }
+`
 export const Container = styled.div`  
   display: flex;
   justify-content: space-between;
@@ -16,11 +21,13 @@ export const Wrapper = styled.div`
 
 `;
 
-export const Link = styled.a`
+export const Link = styled.a<{blink?:boolean}>`
   text-decoration: none;
   cursor: pointer;
   position: relative;
   transition: 0.3s ease-in-out;  
+  ${({blink}) => blink && `animation: ${blinker} 1s ease-in-out 2;`}
+
   &:hover{
     color: #FCC949;
   }

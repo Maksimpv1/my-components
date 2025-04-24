@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useBlinkLinks } from "../../../hooks/blinkLinks";
 import * as SC from "./Header.style";
 
 const options = [
@@ -16,12 +18,16 @@ const options = [
 ]
 
 export const Header = () => {
+  const {blink} = useBlinkLinks()
+  useEffect(()=>{
+    console.log(blink)
+  },[blink])
   return (
     <SC.Container>
       <SC.Link href="mailto:maksimpv1@gmial.com">maksimpv1@gmail.com</SC.Link>
       <SC.Wrapper>
         {options.map((item)=>(        
-          <SC.Link href={item.link} key={item.key}>
+          <SC.Link href={item.link} key={item.key} blink={blink}>
             {item.value}
           </SC.Link>
         ))}

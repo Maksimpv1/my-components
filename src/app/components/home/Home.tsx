@@ -8,7 +8,9 @@ export const HomePage = () => {
   return (
     <SC.Container>
       <WindownsBar/>
-      <Header />
+      <section id="header">
+        <Header />
+      </section>
       <MainPage />
       <Footer />
     </SC.Container>
