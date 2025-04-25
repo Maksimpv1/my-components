@@ -1,4 +1,4 @@
-import { keyframes, styled } from "styled-components";
+import { css, keyframes, styled } from "styled-components";
 
 const blinker = keyframes`
   0% { color: #FCC949; }
@@ -26,7 +26,12 @@ export const Link = styled.a<{blink?:boolean}>`
   cursor: pointer;
   position: relative;
   transition: 0.3s ease-in-out;  
-  ${({blink}) => blink && `animation: ${blinker} 1s ease-in-out 2;`}
+
+  ${({ blink }) =>
+    blink &&
+    css`
+      animation: ${blinker} 1s ease-in-out 2;
+    `}
 
   &:hover{
     color: #FCC949;

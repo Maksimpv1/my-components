@@ -1,7 +1,6 @@
 import { useEffect } from "react";
-import { useBlinkLinks } from "../../../hooks/blinkLinks";
 import * as SC from "./Header.style";
-
+import { useAppSelector } from "../../../redux/store/store";
 const options = [
    {value: 'Linkedin',
    key:  1,
@@ -12,22 +11,19 @@ const options = [
    link: 'https://github.com/Maksimpv1'
   },
   {value: 'Telegram',
-    key:  2,
+    key:  3,
    link: 'https://t.me/Popov_Max'
   }
 ]
 
 export const Header = () => {
-  const {blink} = useBlinkLinks()
-  useEffect(()=>{
-    console.log(blink)
-  },[blink])
+  const blink = useAppSelector((item) => item.blink )
   return (
     <SC.Container>
-      <SC.Link href="mailto:maksimpv1@gmial.com">maksimpv1@gmail.com</SC.Link>
+      <SC.Link blink={blink} href="mailto:maksimpv1@gmial.com">maksimpv1@gmail.com</SC.Link>
       <SC.Wrapper>
-        {options.map((item)=>(        
-          <SC.Link href={item.link} key={item.key} blink={blink}>
+        {options.map((item,index)=>(        
+          <SC.Link href={item.link} key={index} blink={blink}>
             {item.value}
           </SC.Link>
         ))}

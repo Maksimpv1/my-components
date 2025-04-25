@@ -1,6 +1,6 @@
-import { useBlinkLinks } from '../../../../../hooks/blinkLinks'
 import { BtnNextPage } from '../../../ui/BtnNextPage/BtnNextPage'
 import * as SC from './MainMenu.style'
+import { useOneBlink } from '../../../../../hooks/oneBlink'
 
 const options = [
     {key: 1, value: 'SKILLS', id: "skills"},
@@ -11,21 +11,22 @@ const options = [
 ]
 
 export const MainMenu = () => {
-    const {handleBlink} = useBlinkLinks()
+    const handleBlink = useOneBlink();
     const scrollToblock = (ID:string) => {
-        const element = document.getElementById(ID)
-        if(element){
-            element.scrollIntoView({ behavior: "smooth" })
-        }
-        if(ID === 'header'){
-            handleBlink()
+        const element = document.getElementById(ID)        
+            if(element){
+                element.scrollIntoView({ behavior: "smooth" })
+            }
+            if(ID === 'header'){
+                handleBlink()
+            }else{
         }
     }
     return(
         <SC.Container>
             <SC.BtnContainer>
                 {options.map((item,index)=>(
-                    <SC.StyledBtn key={item.key} func={()=>scrollToblock(item.id)}>
+                    <SC.StyledBtn key={index} func={()=>scrollToblock(item.id)}>
                         {item.value}
                     </SC.StyledBtn>
                 ))}

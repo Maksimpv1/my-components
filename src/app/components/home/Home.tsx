@@ -7,10 +7,10 @@ import * as SC from "./HomePage.style";
 export const HomePage = () => {
   return (
     <SC.Container>
-      <WindownsBar/>
-      <section id="header">
-        <Header />
-      </section>
+        <section id="header">
+          <WindownsBar/>
+          <Header />
+        </section>
       <MainPage />
       <Footer />
     </SC.Container>
