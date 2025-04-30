@@ -1,3 +1,4 @@
+import { useScrollTo } from "../../../hooks/scrollTo";
 import { BtnNextPage } from "../ui/BtnNextPage/BtnNextPage"
 import * as SC from "./About.module"
 interface Itype {
@@ -5,6 +6,8 @@ interface Itype {
 }
 
 export const About = () => {
+    
+    const scrollTo = useScrollTo();
     const colors = {
         red:"#FF6B6B",
     }
@@ -33,7 +36,7 @@ export const About = () => {
                     </SC.Text>
                     </SC.Card>
                 </SC.Cards> 
-                <BtnNextPage id='about'>Contact</BtnNextPage>   
+                <BtnNextPage id='about' func={() => scrollTo("header")}>Contact</BtnNextPage>   
             </SC.Wrapper>
         </SC.Container>
     )
