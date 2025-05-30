@@ -16,8 +16,8 @@ export const MainSlider = () => {
     return(
         <SC.Container>
             <SC.SlidesWrapper>
-            {duplicatedSlides.map((item)=>(
-                <Slide key={item.key} content={item.content} text={item.text} title={item.title}/>
+            {duplicatedSlides.map((item,index)=>(
+                <Slide key={index} content={item.content} text={item.text} title={item.title}/>
             ))}
             </SC.SlidesWrapper>
         </SC.Container>

@@ -1,15 +1,15 @@
-import { FC, useState } from "react"
-import { CustomButton } from "../../ui/CustomButton/CustomButton"
 import * as SC from "./Cards.module"
 import { ModalWindow } from "../../ui/ModalWin/ModalWindow"
+import { FC, useState } from "react";
 
 interface ICards {
     title:string,
     text:string,
     img:string,
+    fullText:React.ReactNode,
 }
 
-export const Cards: FC<ICards> = ({title, text, img}) => {
+export const Cards: FC<ICards> = ({title, text, img,fullText}) => {
     const [open, setOpen] = useState<boolean>(false);
 
 
@@ -42,7 +42,7 @@ export const Cards: FC<ICards> = ({title, text, img}) => {
                 </SC.ModalImg>
                     <SC.ModalInfo>
                         <SC.Text>
-                            {text}
+                            {fullText}
                         </SC.Text>
                         <SC.ModalStack>                            
                             <SC.Text>
