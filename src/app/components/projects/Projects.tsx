@@ -9,6 +9,15 @@ const projectsData = [
         img:"/img/creative.jpg",
         fullText: <div><li>Разрабатывал календарь событий, адаптировал профиль пользователя и личный кабинет под мобильные устройства.</li> 
         <li>Создавал различные UI-компоненты для улучшения пользовательского опыта.</li></div>,
+        stack:<div><h4>Nextjs</h4>
+        <li>Typescript</li>
+        <li>MUI</li>
+        <li>React-reduxjs, toolkit</li>        
+        <li>React-big-calendar</li>        
+        <li>Axios</li>        
+        <li>Dayjs</li>
+        <li>React-i18next</li>
+        </div>,
     },
     {
         title:"Student",
@@ -17,6 +26,15 @@ const projectsData = [
         fullText:<div><h4>Полностью реализовал фронтенд-часть</h4>
         <li>Системы входа и регистрации.</li>
         <li>Личный профиль, расписание, оценки, список преподавателей.</li></div>,
+        stack:<div><h4>Nextjs</h4>
+        <li>Typescript</li>
+        <li>styled-components</li>
+        <li>axios</li>
+        <li>React-redux, toolkit</li>
+        <li>firebase (для демо)</li>
+        <li>formik</li>
+        <li>yup</li>
+        </div>,
     },
     {
         title:"Notion clone",
@@ -29,9 +47,22 @@ const projectsData = [
         <li>Встроенный ИИ-помощник (например, для генерации текста).</li>
         <li>Отображение курсоров других пользователей при совместном редактировании.</li>
         <h4>Бэкенд:</h4>
-        <li>Сервер на Node.js/Express (или другой стек), обрабатывающий запросы.</li>
+        <li>Использован сервис cloudflare, для серверной логики, и деплоя проекта.</li>
         <li>Интеграция с ИИ-моделями (например, GPT для перевода/анализа текста).</li>
         <li>Отдача данных в JSON-формате.</li>
+        </div>,
+        stack:<div><h4>Nextjs</h4>
+        <li>liveblocks</li>
+        <li>clerk</li>
+        <li>radix-ui</li>
+        <li>firebase</li>
+        <li>frame-motion</li>
+        <li>sonner</li>
+        <li>vaul</li>
+        <li>yjs</li>
+        <h4>Cloudflare</h4>
+        <li>hono</li>
+        <li>openai</li>
         </div>,
     }
 ]
@@ -44,7 +75,7 @@ export const Projects = () => {
                     Latest Projects
                 </SC.Title>
                 {projectsData.map((item,index)=>(                    
-                <Cards key={index} title={item.title} text={item.text} img={item.img} fullText={item.fullText}/>
+                <Cards key={index} title={item.title} text={item.text} img={item.img} fullText={item.fullText} stack={item.stack}/>
                 ))}
                 <div style={{padding:"20px 0 0 0"}}>
                     <BtnNextPage id='about'>More About ME</BtnNextPage>     

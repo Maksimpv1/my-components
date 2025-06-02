@@ -7,9 +7,10 @@ interface ICards {
     text:string,
     img:string,
     fullText:React.ReactNode,
+    stack: React.ReactNode,
 }
 
-export const Cards: FC<ICards> = ({title, text, img,fullText}) => {
+export const Cards: FC<ICards> = ({title, text, img,fullText,stack}) => {
     const [open, setOpen] = useState<boolean>(false);
 
 
@@ -46,7 +47,7 @@ export const Cards: FC<ICards> = ({title, text, img,fullText}) => {
                         </SC.Text>
                         <SC.ModalStack>                            
                             <SC.Text>
-                                213
+                                {stack}
                             </SC.Text>
                         </SC.ModalStack>
                     </SC.ModalInfo>
