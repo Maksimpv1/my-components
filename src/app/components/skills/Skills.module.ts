@@ -4,13 +4,20 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     height: 100vh;
+    @media (max-width: 920px){
+    margin: 15px;
+}
 `;
 export const Wrapper = styled.div`
     display: flex;
     max-width: 1170px;
     width: 100%; 
     margin: 20px auto;
-    justify-content: center;
+    justify-content: center;    
+    gap: 20px;
+    @media (max-width: 920px){
+        flex-wrap: wrap;
+    }
 `;
 export const SkillCard = styled.div`
     display: flex;
@@ -28,6 +35,10 @@ export const SkillCard = styled.div`
         scale: 1.05;
         transition: 0.3s ease-in-out;
         box-shadow: 0px 0px 14px 5px #4B4636;
+    }
+    @media (max-width: 1100px){
+        max-width: 350px;        
+        min-width:250px ;
     }
 `;
 export const SkillInfo = styled.div`

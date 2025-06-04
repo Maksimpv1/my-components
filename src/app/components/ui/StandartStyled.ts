@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    display: flex;
-    margin: 0 auto;
-    max-width: 1170px ;
+    height: 100vh;
+    @media (max-width:920px){
+        height: auto;
+        margin: 0 15px;
+    }
 `;
-
 
 export const Title = styled.h2`
     margin: 0;

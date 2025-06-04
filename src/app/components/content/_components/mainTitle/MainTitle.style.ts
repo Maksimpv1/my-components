@@ -7,6 +7,9 @@ export const Container = styled.div`
     align-items: center;
     width: 100%;
     padding: 180px 0 0 0;
+    @media (max-width:920px){
+      padding: 50px 0 0 0;
+    }
 `;
 
 export const MainTitle = styled.h1`

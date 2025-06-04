@@ -19,6 +19,10 @@ export const Cards = styled.div`
     flex-direction: row;
     margin: 0 auto;
     margin-bottom: 40px;
+    @media (max-width:920px){
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 `;
 
 export const Card = styled.div`

@@ -30,13 +30,19 @@ export const Wrapper = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%; 
-    height: 100%; 
     max-width: 1000px;
     max-height: 700px;
     background-color: #FFFFFF; 
     border-radius: 25px;
     padding: 15px;
     z-index: 1002; 
+    @media (max-width:1100px){
+        max-width: 850px;
+    }
+    @media (max-width: 920px) {
+        width: 80%;        
+        max-height: 80%;
+    }
 `;
 
 export const Close = styled.button`

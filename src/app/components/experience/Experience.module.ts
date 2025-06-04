@@ -1,9 +1,6 @@
 import { styled } from "styled-components";
 
-export const Container = styled.div`
-    height: 100vh;
-    
-`;
+
 export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
@@ -13,7 +10,9 @@ export const Wrapper = styled.div`
     padding: 20px 0;
     gap: 30px;
     align-items: center;
-`;
+    @media (max-width: 920px){
+        max-width: 550px;
+    }`;
 export const MainTitel = styled.h2`
     font-size: 28px;
 `;

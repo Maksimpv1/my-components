@@ -18,10 +18,22 @@ export const Container = styled.div`
     *{        
         background-color: #F0F0F0;
     }
+    @media (max-width: 1250px){
+        &:hover{            
+            transform: scale(1.02);
+        }
+    }
+    @media (max-width: 920px){
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;        
+        width: 80%;
+    }
 `;
 export const ImgBox = styled.div`
     width: 350px;
     padding: 10px;
+    min-width: 350px;
 `;
 
 export const InfoBox = styled.div`
@@ -38,6 +50,7 @@ padding: 0;
 
 `;
 export const Text = styled.p`
+
 margin: 0;
 padding: 0;
 
@@ -74,6 +87,9 @@ export const ModalImg = styled.div`
     display: flex;
     width: 550px;
     margin: 0 auto;
+    @media (max-width:920px){
+        width: 380px;
+    }
 `;
 
 export const ModalTitle = styled.div`
@@ -91,9 +107,11 @@ export const ModalInfo = styled.div`
 `;
 export const ModalStack = styled.div`
     display: flex;
-    width: 250px;
-    height: 200px;
+    max-width: 250px;
+    width: 100%;
+    margin-left: auto;
     box-shadow: 0 0 5px 1px grey;
     border-radius: 15px;
     padding: 5px;
+    justify-content: center;
 `;

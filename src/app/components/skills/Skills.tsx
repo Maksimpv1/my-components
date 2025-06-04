@@ -1,12 +1,12 @@
 import React from 'react'
 import { MainSlider } from '../content/_components/mainSlider/MainSlider'
 import * as SC from './Skills.module'
-import { Title } from '../ui/StandartStyled'
+import { Container, Title } from '../ui/StandartStyled'
 import { SkillsData } from './SkillsData'
 
 export const Skills = () => {
     return(
-        <SC.Container>
+        <Container>
             <SC.Wrapper>
                 {SkillsData.map((card,index)=>(
                     <SC.SkillCard key={index}>
@@ -20,6 +20,6 @@ export const Skills = () => {
                 ))}
             </SC.Wrapper>          
         <MainSlider/>
-        </SC.Container>
+        </Container>
     )
 }

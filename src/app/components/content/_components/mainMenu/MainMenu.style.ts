@@ -14,6 +14,10 @@ export const BtnContainer = styled.div`
     margin: 0 auto;
     padding-top: 50px;
     margin-bottom: 200px;
+    @media (max-width:920px){
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+    }
 `;
 
 const colorChange = keyframes`

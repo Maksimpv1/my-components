@@ -1,9 +1,10 @@
 import { BtnNextPage } from "../ui/BtnNextPage/BtnNextPage"
+import { Container } from "../ui/StandartStyled"
 import * as SC from "./Experience.module"
 
 export const Experience = () => { 
     return(
-        <SC.Container>
+        <Container>
             <SC.Wrapper>
                 <SC.MainTitel>
                     Experience
@@ -45,6 +46,6 @@ export const Experience = () => {
                     <BtnNextPage id="projects">Jump to Projects</BtnNextPage>
                 </SC.BtnBox>
             </SC.Wrapper>
-        </SC.Container>
+        </Container>
     )
 }

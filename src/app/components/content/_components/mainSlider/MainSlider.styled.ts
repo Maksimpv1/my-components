@@ -14,6 +14,11 @@ export const Container = styled.div`
   overflow: hidden; 
   width: 90%;
   margin: 30px auto;
+  @media (max-width:920px){
+    width: 90%;
+    height: 165px;
+    padding: 5px;
+  }
 `;
 
 export const SlidesWrapper = styled.div`
