@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { media } from "../../../indexStyles";
 
 export const Container = styled.div`
     display: flex;
@@ -19,6 +20,9 @@ export const MainTitle = styled.h1`
     font-weight: 500;
     text-align: center;
     margin: 30px 0 0 0;
+    ${media.mobile}{
+      font-size:28px;
+    }
 `;
 
 export const TextDiscriptiom = styled.p`
@@ -26,6 +30,9 @@ export const TextDiscriptiom = styled.p`
     font-size: 24px;
     text-align: center;
     max-width: 800px;
+    ${media.mobile}{
+      font-size:18px;
+    }
 `;
 export const ImgContainer = styled.div`
   display: flex;
@@ -45,9 +52,12 @@ export const AvatarImg = styled.img`
 export const MainName = styled.h2`
   font-size: 26px;
   color: black;
-  font-style: italic;
   text-align: center;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0;
   padding: 0;
+  ${media.mobile}{
+    margin-top: 10px;
+    font-size:20px;
+  }
 `;

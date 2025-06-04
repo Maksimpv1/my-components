@@ -1,14 +1,14 @@
 import { BtnNextPage } from "../ui/BtnNextPage/BtnNextPage"
-import { Container } from "../ui/StandartStyled"
+import { Container, MainTitel } from "../ui/StandartStyled"
 import * as SC from "./Experience.module"
 
 export const Experience = () => { 
     return(
         <Container>
             <SC.Wrapper>
-                <SC.MainTitel>
+                <MainTitel>
                     Experience
-                </SC.MainTitel>              
+                </MainTitel>              
                 <SC.ExperiensBox>
                     <SC.ExpName>
                         Nexlify — Frontend разработчик (React.js) <br/>

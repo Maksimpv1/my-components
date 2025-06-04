@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import { CustomButton } from "../../ui/CustomButton/CustomButton";
+import { media } from "../../indexStyles";
 
 export const Container = styled.div`
     display: flex;
@@ -34,6 +35,9 @@ export const ImgBox = styled.div`
     width: 350px;
     padding: 10px;
     min-width: 350px;
+    ${media.mobile}{
+        min-width: 250px;
+    }
 `;
 
 export const InfoBox = styled.div`
@@ -47,12 +51,18 @@ export const InfoBox = styled.div`
 export const Title = styled.h2`
 margin: 0;
 padding: 0;
+${media.mobile}{
+    font-size: 18px;
+}
 
 `;
 export const Text = styled.p`
 
 margin: 0;
 padding: 0;
+${media.mobile}{
+    font-size: 14px;
+}
 
 `;
 export const Img = styled.img`
@@ -87,8 +97,11 @@ export const ModalImg = styled.div`
     display: flex;
     width: 550px;
     margin: 0 auto;
-    @media (max-width:920px){
+    ${media.tablet}{
         width: 380px;
+    }
+    ${media.mobile}{
+        max-width: 280px;
     }
 `;
 
@@ -104,6 +117,27 @@ export const ModalInfo = styled.div`
     margin: 10px;
     gap: 10px;
     margin-top: 20px;
+    ${media.mobile} {
+        max-height: 250px;
+        overflow-y: auto; 
+        &::-webkit-scrollbar {
+            width: 8px; 
+        }
+        &::-webkit-scrollbar-track {
+            background: transparent; 
+            border-radius: 10px;
+            margin: 5px; 
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #888; 
+            border-radius: 10px;
+            border: 2px solid transparent; 
+            background-clip: content-box; 
+        }
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
+    }
 `;
 export const ModalStack = styled.div`
     display: flex;
@@ -114,4 +148,11 @@ export const ModalStack = styled.div`
     border-radius: 15px;
     padding: 5px;
     justify-content: center;
+        ${media.mobile}{        
+        box-shadow: 0 0 2px 1px grey;
+        margin: 5px;
+        justify-content: center;
+        flex-direction: column; 
+        min-height: fit-content;
+    }
 `;

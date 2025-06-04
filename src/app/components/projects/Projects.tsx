@@ -1,5 +1,5 @@
 import { BtnNextPage } from '../ui/BtnNextPage/BtnNextPage'
-import { Container } from '../ui/StandartStyled'
+import { Container, MainTitel } from '../ui/StandartStyled'
 import { Cards } from './Cards/Cards'
 import * as SC from './Projects.module'
 
@@ -73,9 +73,9 @@ export const Projects = () => {
     return(
         <Container>
             <SC.Wrapper>
-                <SC.Title>
+                <MainTitel>
                     Latest Projects
-                </SC.Title>
+                </MainTitel>
                 {projectsData.map((item,index)=>(                    
                 <Cards key={index} title={item.title} text={item.text} img={item.img} fullText={item.fullText} stack={item.stack}/>
                 ))}

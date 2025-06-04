@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { media } from "../indexStyles";
 
 export const Container = styled.div`
     height: 100vh;
@@ -33,6 +34,10 @@ export const Card = styled.div`
     width: 100%;
     gap: 15px;
     padding: 15px;
+    ${media.mobile}{
+        padding: 8px;
+        gap: 5px;
+    }
 `;
 export const Text = styled.p`
     text-align: justify;
@@ -40,7 +45,10 @@ export const Text = styled.p`
     white-space: break-spaces;
     padding-left:10px;
     cursor: pointer;
-    border-left: 1px solid #FCC949;
+    border-left: 3px solid #FCC949;
+    ${media.mobile}{
+        font-size: 14px;
+    }
 `;
 export const StyledText = styled.span<{color?:string}>`
     font-size: 16px;

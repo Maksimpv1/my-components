@@ -1,6 +1,6 @@
 import { useScrollTo } from "../../../hooks/scrollTo";
 import { BtnNextPage } from "../ui/BtnNextPage/BtnNextPage"
-import { Container } from "../ui/StandartStyled";
+import { Container, MainTitel } from "../ui/StandartStyled";
 import * as SC from "./About.module"
 interface Itype {
     type: 'name' | 'tech' | 'years';
@@ -17,14 +17,14 @@ export const About = () => {
             <SC.Wrapper>      
                 <SC.Cards>
                     <SC.Card>
-                        <h2>Образование</h2>
+                        <MainTitel>Образование</MainTitel>
                         <SC.Text><SC.StyledText color={colors.red}>БГУИР</SC.StyledText> - Инженер по информационным
                          технологиям и управлению в технических системах <SC.StyledText color={colors.red}>2017 - 2021</SC.StyledText></SC.Text>
                         <SC.Text><SC.StyledText color={colors.red}>TeachMeSkills</SC.StyledText> Frontend Developer <SC.StyledText color={colors.red}>
                         2022 - 2023 </SC.StyledText></SC.Text>                        
                     </SC.Card>
                     <SC.Card>
-                    <h2>Обо мне</h2>
+                    <MainTitel>Обо мне</MainTitel>
                     <SC.Text>
                     Frontend-разработку я выбрал в 2020 году на последнем курсе университета, вдохновившись возможностью оживлять идеи через код.
                     В 2023 году я решил развиваться в этом направлении

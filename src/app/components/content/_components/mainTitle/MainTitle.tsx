@@ -26,7 +26,7 @@ export const MainTitle = () => {
     return(
         <SC.Container>
             <SC.ImgContainer>
-                <SC.AvatarImg src={"/img/avatar.jpg"} />
+                <SC.AvatarImg src={"/img/Maksim.png"} />
             </SC.ImgContainer>
             <SC.MainName>Popov Maksim</SC.MainName>
                 <SC.MainTitle>

@@ -1,13 +1,6 @@
 import styled from "styled-components";
+import { media } from "../indexStyles";
 
-export const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    @media (max-width: 920px){
-    margin: 15px;
-}
-`;
 export const Wrapper = styled.div`
     display: flex;
     max-width: 1170px;
@@ -15,8 +8,12 @@ export const Wrapper = styled.div`
     margin: 20px auto;
     justify-content: center;    
     gap: 20px;
-    @media (max-width: 920px){
+    ${media.tablet}{
         flex-wrap: wrap;
+    }
+    ${media.mobile}{
+    margin: 5px;
+    gap: 0;
     }
 `;
 export const SkillCard = styled.div`
@@ -40,6 +37,12 @@ export const SkillCard = styled.div`
         max-width: 350px;        
         min-width:250px ;
     }
+    ${media.mobile}{
+        max-width: 260px;
+        &:hover{
+        scale: 1.02;
+    }        
+    }
 `;
 export const SkillInfo = styled.div`
     display: flex;
@@ -47,8 +50,14 @@ export const SkillInfo = styled.div`
     align-items: start;
     width: 100%;
     margin: 30px 0;
+    ${media.mobile}{
+        margin: 15px;
+    }
 `;
 
 export const Text = styled.li`
     font-size: 20px;
+        ${media.mobile}{
+        font-size:16px;
+    }
 `;

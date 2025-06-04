@@ -22,10 +22,6 @@ export const Wrapper = styled.div`
     }
 `;
 
-export const Title = styled.h2`
-    font-size: 28px;
-`;
-
 export const Name = styled.h4`
     padding: 0;
     margin: 5px;

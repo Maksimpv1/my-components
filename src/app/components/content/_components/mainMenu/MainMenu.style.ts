@@ -1,5 +1,6 @@
 import { keyframes, styled } from "styled-components";
 import { CustomButton } from "../../../ui/CustomButton/CustomButton";
+import { media } from "../../../indexStyles";
 
 export const Container = styled.div`    
     display: flex;
@@ -14,9 +15,10 @@ export const BtnContainer = styled.div`
     margin: 0 auto;
     padding-top: 50px;
     margin-bottom: 200px;
-    @media (max-width:920px){
+    ${media.tablet}{
         flex-wrap: wrap;
         margin-bottom: 60px;
+        gap: 10px;
     }
 `;
 
@@ -50,6 +52,9 @@ export const StyledBtn = styled(CustomButton)`
         font-size: 19px;
         transition: 0.2s ease-in-out;
         animation-play-state: paused;
+    }
+    ${media.mobile}{
+        font-size: 14px;
     }
 `;
 

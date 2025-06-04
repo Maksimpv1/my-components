@@ -1,4 +1,5 @@
 import { css, keyframes, styled } from "styled-components";
+import { media } from "../indexStyles";
 
 const blinker = keyframes`
   0% { color: #FCC949; }
@@ -18,6 +19,9 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   display: flex;
   gap: 30px;
+  ${media.mobile}{
+    gap: 10px;
+  }  
 
 `;
 
@@ -50,6 +54,9 @@ export const Link = styled.a<{blink?:boolean}>`
   &:hover::after {
     width: 100%; 
   }
+    ${media.mobile}{
+    font-size:14px;
+  }  
   
 `;
 

@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { media } from "../../indexStyles";
 
 export const Container = styled.div<{ open: boolean }>`   
     display: ${({ open }) => (open ? "flex" : "none")};
@@ -46,6 +47,9 @@ export const Wrapper = styled.div`
 `;
 
 export const Close = styled.button`
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 40px;
     height: 40px;
     right: 20px;
@@ -59,6 +63,16 @@ export const Close = styled.button`
         }
     &:hover{
         svg{
+            transition: 0.2s ease-in-out;
+            scale: 1.2;
+        }
+    }
+        ${media.mobile}{  
+        width: 25px;
+        height: 25px;
+        svg{
+            width: 25px;    
+            height: 25px;
             transition: 0.2s ease-in-out;
             scale: 1.2;
         }

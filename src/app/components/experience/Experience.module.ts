@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { media } from "../indexStyles";
 
 
 export const Wrapper = styled.div`
@@ -10,16 +11,20 @@ export const Wrapper = styled.div`
     padding: 20px 0;
     gap: 30px;
     align-items: center;
-    @media (max-width: 920px){
+    ${media.tablet}{
         max-width: 550px;
     }`;
-export const MainTitel = styled.h2`
-    font-size: 28px;
-`;
-export const ExpName = styled.h3`
 
+export const ExpName = styled.h3`
+    ${media.mobile}{
+        font-size: 16px;
+        margin: 0;
+    }
 `;
 export const ExpText = styled.p`
+    ${media.mobile}{
+        font-size: 14px;
+    }
 
 `;
 export const ExperiensBox = styled.div`
@@ -35,4 +40,7 @@ export const BtnBox = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 50px;
+    ${media.mobile} {
+        margin-top: 20px;
+    }
 `;
