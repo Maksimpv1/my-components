@@ -69,6 +69,7 @@ export const BtnGo = styled(CustomButton)`
     background-color: #FCE8B7;
     border: none;
     box-shadow: 0 0 5px 0 #927A3F;
+    color: black;
     &:hover{
         scale: 1.1;
         background-color:#FCF7EA;

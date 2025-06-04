@@ -68,11 +68,9 @@ export const Close = styled.button`
         }
     }
         ${media.mobile}{  
-        width: 25px;
-        height: 25px;
+        width: 30px;
+        height: 30px;
         svg{
-            width: 25px;    
-            height: 25px;
             transition: 0.2s ease-in-out;
             scale: 1.2;
         }

@@ -22,6 +22,7 @@ export const BtnGo = styled(CustomButton)`
     ${media.tablet}{
         width: 120px;
         font-size: 14px;
-        padding: 7px 3px 7px 12px;
+        padding: 0;
+        justify-content: center;
     }
 `;

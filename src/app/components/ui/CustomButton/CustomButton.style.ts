@@ -13,4 +13,5 @@ export const Container = styled.button`
         background-color: #FCE8B7;
         transition: 0.3s ease-in-out;
     }
+    color: black;
 `;
