@@ -56,8 +56,8 @@ export const MainName = styled.h2`
   font-weight: 500;
   margin: 0;
   padding: 0;
+   margin-top: 10px;
   ${media.mobile}{
-    margin-top: 10px;
     font-size:20px;
   }
 `;
