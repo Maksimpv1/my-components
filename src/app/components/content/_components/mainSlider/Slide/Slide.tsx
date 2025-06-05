@@ -8,7 +8,7 @@ interface ISlide {
 
 export const Slide: React.FC <ISlide> = ({ content,title,text }) => {
     return(
-        <SC.Container img={content} >
+        <SC.Container $img={content} >
             <SC.Content>
                 <SC.Title>
                     {title}

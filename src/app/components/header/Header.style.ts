@@ -25,14 +25,14 @@ export const Wrapper = styled.div`
 
 `;
 
-export const Link = styled.a<{blink?:boolean}>`
+export const Link = styled.a<{$blink?:boolean}>`
   text-decoration: none;
   cursor: pointer;
   position: relative;
   transition: 0.3s ease-in-out;  
 
-  ${({ blink }) =>
-    blink &&
+  ${({ $blink }) =>
+    $blink &&
     css`
       animation: ${blinker} 1s ease-in-out 2;
     `}

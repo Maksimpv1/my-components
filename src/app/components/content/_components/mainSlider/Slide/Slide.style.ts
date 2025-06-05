@@ -1,14 +1,14 @@
 import { styled } from "styled-components";
 
 
-export const Container = styled.div<{ img?: string }>`
+export const Container = styled.div<{ $img?: string }>`
     display: flex;
     flex-direction: column;
     justify-content: end;
     align-items: start;
     width: 200px;
     height: 300px;
-    background-image: url(${({ img }) => img});
+    background-image: url(${({ $img }) => $img});
     background-size: 180px auto; 
     background-position: center; 
     background-repeat: no-repeat; 

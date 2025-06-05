@@ -20,10 +20,10 @@ export const Header = () => {
   const blink = useAppSelector((item) => item.blink )
   return (
     <SC.Container>
-      <SC.Link blink={blink} href="mailto:maksimpv1@gmial.com">maksimpv1@gmail.com</SC.Link>
+      <SC.Link $blink={blink} href="mailto:maksimpv1@gmial.com">maksimpv1@gmail.com</SC.Link>
       <SC.Wrapper>
         {options.map((item,index)=>(        
-          <SC.Link href={item.link} key={index} blink={blink}>
+          <SC.Link href={item.link} key={index} $blink={blink}>
             {item.value}
           </SC.Link>
         ))}

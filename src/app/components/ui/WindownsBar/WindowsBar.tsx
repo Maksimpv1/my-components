@@ -18,7 +18,7 @@ export const WindownsBar = () => {
         }
     },[height,perBar])
     return(
-        <SC.Container percent={perBar + ''}>
+        <SC.Container $percent={perBar + ''}>
         </SC.Container>
     )
 }

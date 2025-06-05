@@ -22,7 +22,7 @@ export const Wrapper = styled.div`
     }
 `;
 
-export const Name = styled.h4`
+export const Name = styled.p`
     padding: 0;
     margin: 5px;
 `;
